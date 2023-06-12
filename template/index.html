@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DINE WITH US</title>
+
+    {% load static %}
+   
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <style>
+        .home{
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("{% static 'home-images/main-home.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+   
+    <section class="home" id="home">
+        <nav>
+            <div class="logo">
+                <h1>Dine <span>with us</span></h1>
+            </div>
+           
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'veg' %}">Veg</a></li>
+                <li><a href="{% url 'nonveg' %}">Non-Veg</a></li>
+                <li><a href="{% url 'icecream' %}">Ice-Creams</a></li>
+                <li><a href="{% url 'milkshake' %}">Milkshakes</a></li>
+                <li><a href="{% url 'juice' %}">Juices</a></li>
+                <li><a href="{% url 'cake' %}">Cakes</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+           
+            <div class="social">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+        </nav>
+        <div class="banner">
+            <h2>Welcome to <span>dine with us</span></h2>
+            <h3>Delivering delicious food in the city</h3>
+        </div>
+        <div class="special">
+            <h1>Today's special</h1>
+            <div class="special-box">
+                <img src="{% static 'nonveg-images/chickenbiriyani1.jfif' %}">
+                <h2>Chicken biriyani</h2>
+                <h3>Rs.250</h3>
+            </div>
+            <div class="special-box">
+                <img src="{% static 'milkshake-images/m3.jfif' %}">
+                <h2>Milkshake</h2>
+                <h3>Rs.150</h3>
+            </div>
+            <div class="special-box">
+                <img src="{% static 'icecream-images/blueberry2.jfif' %}">
+                <h2>Blueberry icecream</h2>
+                <h3>Rs.150</h3>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
